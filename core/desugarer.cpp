@@ -342,7 +342,7 @@ class Desugarer {
                     UStringStream ss;
                     ss << U"$outer_super_index" << (counter++);
                     const Identifier *super_var = desugarer->id(ss.str());
-                    AST *index = super_index->index;
+                    AST *index __attribute__((unused)) = super_index->index;
                     // Desugaring of expr should already have occurred.
                     assert(index != nullptr);
                     // Re-use super_index since we're replacing it here.
